@@ -1,0 +1,72 @@
+//TASK 1
+//-----------------------------------------
+function checkEvenOrOdd(number) {
+  if (number % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+console.log(checkEvenOrOdd(4)); 
+console.log(checkEvenOrOdd(7)); 
+
+
+//TASK 2
+//-----------------------------------------
+function reverseString(String) {
+    let reversedString = '';
+
+    for (let i = String.length - 1; i >= 0; i--) {
+        reversedString += String[i];
+    }
+    return reversedString;
+  }
+let originalString = "Hello, World!";
+console.log(reverseString(originalString));
+  
+//TASK 3    
+//-----------------------------------------
+function isEqual(str1, str2) {
+    // Compare two strings character by character
+    if (str1.length !== str2.length) {
+      return false;
+    }
+    for (let i = 0; i < str1.length; i++) {
+      if (str1[i] !== str2[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+function reverseString(inputString) {
+    let reversedString = '';
+    for (let i = inputString.length - 1; i >= 0; i--) {
+      reversedString += inputString[i];
+    }
+    return reversedString;
+  }
+
+function isPalindrome(inputString) {
+    return isEqual(inputString, reverseString(inputString));
+  }  
+  const testString1 = "racecar";
+  const testString2 = "hello";
+  console.log(isPalindrome(testString1)); 
+  console.log(isPalindrome(testString2));
+  
+//TASK 4
+//-----------------------------------------
+// Doing with out recursion
+function factorial(number) {
+    if (number === 0 || number === 1) {
+      return 1;
+    } else {
+      let result = 1;
+      for (let i = 2; i <= number; i++) {
+        result *= i;
+      }
+      return result;
+    }
+  }
+  console.log(factorial(5));
